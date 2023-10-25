@@ -1,98 +1,122 @@
-@import url('https://fonts.googleapis.com/css2? family= Inter:wght@400;700 & family= Nosifer & family= Poppins:wght@400;500;700 & display=swap');
-:root{
-    --cor-preta:#000000;
-    --fonte-principal:'Nosifer',sans-serif;
-    --fonte-segundaria:'Inter',sans-serif;
-    
-}
-body{
-    font-family: var(--fonte-segundaria);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nosifer&family=Poppins:wght@400;500;700&display=swap');
+
+
+:root {
+    --cor-preta: #000000;
+    --cor-terciaria:#000000; 
+    --cor-segundaria: #your-secondary-color; 
+    --fonte-principal: 'Nosifer', sans-serif;
+    --fonte-secundaria: 'Inter', sans-serif;
 }
 
-.cabecalho{
-   display: flex;
-   justify-content: center;
-   margin-top: 3%;
+body {
+    font-family: var(--fonte-secundaria);
+    margin: 0;
+    padding: 0;
 }
-.cabecalho__menu{
+.cabecalho {
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    padding: 3% 0;
 }
-.cabecalho__menu__link{
-    font-family: var(--font-segundaria);
-    font-size: 2rem;
+
+.cabecalho__menu {
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
-    text-decoration: none;/*tirando a barra do link*/
+    text-decoration: none;
 }
-.apresentacao__cabecalho{
-    background-color: #000000;
-}
-.apresentacao__imagem{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-}
-.apresentacao{
-    padding: 5% 15%;
-    
-}
-.apresentacao__titulo{
-    font-family: var(--fonte-principal);
+
+.apresentacao__cabecalho {
+    background-color: var(--cor-preta);
+    color: var(--cor-terciaria);
     text-align: center;
-    font-size:36px ;
+    padding: 2em 0;
+}
+
+.apresentacao__imagem {
+    display: block;
+    margin: 2em auto;
+    max-width: 100%;
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    text-align: center;
+}
+
+.apresentacao__titulo {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
     font-weight: 700;
 }
-.apresentacao__texto{
-    font-size: 26px;
-}
-.apresentacao__link__navegacao{ /*ultilizando um class*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    display: flex; /*adicionando flexbox*/
-    justify-content: center;/*traz os elementos para o centro*/
-    border: 2px solid var(--cor-preta); /*fazendo as borda do botao*/
-    color: var(--cor-segundaria);
-    width: 30%;
-    text-align: center; /*centralizando link*/
-    border-radius: 8px; /*aredondando as ponta do batao*/
-    font-size: 1.5rem; /*tamanho das fonte do link*/
-    font-weight: 600;
-    padding: 20px 0; /*ajustando as bordas do botao*/
-    text-decoration: none;
-    gap: 16px;
-}
-.Contato{
-    margin-top: 1%;
-}
-@media (max-width: 1200px){
-    .cabecalho{
-        padding: 10%;
-        
-    }
-    .cabecalho__menu__link{
-        font-size: 1.5rem;
-    }
-    .cabecalho__menu{
-        justify-content: center;
-        gap: 10%;
-        
-    }
-    .apresentacao__link__navegacao{
-        width: 100%;
-        margin-right: 2rem;
-    }
-    .apresentacao__imagem{
-        width: 100%;
-        
-    }
-    .apresentacao{
-        flex-direction: column-reverse;
-        padding: 5%;
-        }
 
+.apresentacao__texto {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+}
+.apresentacao__link{
+    font-size: 2.18rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+
+}
+.contato{
+    margin-top: -1em;
+}
+
+.apresentacao__link__navegacao {
+    display: flex; 
+    justify-content: center;
+    border: 2px solid var(--cor-terciaria); 
+    color: var(--cor-segundaria);
+    width: 50%;
+    text-align: center; 
+    border-radius: 8px; 
+    font-size: 1.5rem; 
+    font-weight: 600;
+    padding: 21.5px 0; 
+    text-decoration: none;
+    font-family: var(--font-segundaria);
+    gap: 16px;
+
+
+}
+
+.apresentacao__link__navegacao:hover {
+    background-color: var(--cor-preta);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho__menu {
+        margin-top: 1em;
+    }
+
+    .cabecalho__menu__link {
+        font-size: 1.2rem;
+    }
+
+    .apresentacao__link__navegacao {
+        display: block;
+        margin: 1em auto;
+    }
 }
 
