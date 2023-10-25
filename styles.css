@@ -111,6 +111,11 @@ body {
     .cabecalho__menu {
         margin-top: 1em;
     }
+    .apresentacao {
+        width: 100%; 
+        padding: 0; 
+        text-align: center;
+    }
    
 
     .cabecalho__menu__link {
